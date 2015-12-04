@@ -1,0 +1,34 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+{% include "includes/header.twig" %}
+
+<div class="profile-header">
+    {{widget('extendednavigation', 'extendednavigation', { 'align': 'right'})|raw}}
+</div>
+
+    <div class="feature-container">
+        <div class="feature-right-container">
+            {{widget('feature', 'feature-right', {
+                "header": "profile",
+                "strapline": "profile",
+                "defaultBgImg": asset('images/feature-bg.jpg'),
+                "positionTopPercentage": "50",
+                "showBtn": true,
+                "buttonText": "Lorem Ipsum"
+            })|raw}}
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <section class="template-content container">
+    	<!-- Main Widet Zone -->
+       	{{zone('main')|raw}}
+    
+    </section>
+    <!-- End Page Content -->
+
+{% include "includes/footer.twig" %}
+
+{% endblock %}

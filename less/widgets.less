@@ -1,0 +1,1314 @@
+// --------------------------------
+// Cache: CSS > Widgets
+// --------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #LOGO
+//  2.   #COMPANY NAME
+//  3.   #NAVIGATION
+
+//  4.   #IMAGES
+//  5.   #GALLERY
+//  6.   #SLIDESHOW
+
+//  7.   #BUTTONS
+//  7.1  -- #STANDARD
+//  7.2  -- #TWEET, #DROPBOX, #PAYPAL
+//  7.4  -- #CLICK TO CALL
+
+//  8.   #CONTACT FORM
+//  9.   #SIGNUP FORM
+
+// 10.   #SOCIAL ICONS
+// 11.   #TWITTER FEED
+
+// 12.   #DIVIDER (KEYLINE)
+// 13.   #PROFILE
+// 14.   #FACEBOOK
+// 15.   #YELP
+// 16.   #MAP
+// 17.   #HR LINE
+
+
+// -----------------------------
+// 1.  #Logo
+// -----------------------------
+
+.widget__logo {
+    margin-bottom: 10px;
+}
+
+.logo-link {
+    @media @tablet {
+        margin: 0px auto;
+        display: table;
+    }
+}
+
+.logo-image {
+    margin: 0px auto;
+}
+
+
+
+
+// -----------------------------
+// 2.  #Company Name
+// -----------------------------
+
+.company-name {
+    @media @tablet {
+        text-align:center;
+    }
+}
+
+.company-link {
+    @media @tablet {
+        font-size: bkscale(@font__companyname--font-size,0.8);
+        line-height: bkscale(@font__companyname--line-height,0.8);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__companyname--font-size,0.7);
+        line-height: bkscale(@font__companyname--line-height,0.7);
+    }
+}
+
+.widget__companyname a {
+    text-decoration: none;
+}
+
+
+
+
+// -----------------------------
+// 3.  #Navigation
+// -----------------------------
+
+
+// Folder Item Parent: Gives arrow 
+.item-name--parent:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: @color-swatch6;
+}
+
+// Add Styles to Selected Li
+.extendednavigation li.selected {
+    a, .text {
+        color: @font-swatch6-color-hover;
+    }
+}
+
+
+
+
+// -----------------------------
+// 4.  #Images
+// -----------------------------
+
+// Image Captions
+// --------------
+
+// Image Widget
+
+.imagewidget {
+    .image-title {
+        font-size: @font__h2--font-size;
+        line-height: @font__h2--line-height;
+        text-shadow: none;
+    }
+    .image-description {
+        font-size: @font__p--font-size;
+        line-height: @font__p--line-height;
+        text-shadow: none;
+    }
+}
+
+
+
+
+// -----------------------------
+// 5.  #Gallery
+// -----------------------------
+
+// The following styles give you a three column gallery layout with a
+// coloured overlay
+
+// Gallery Layout
+// --------------
+
+// Gallery List
+.gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+// Gallery Item
+// For screen size larger than 920px. Media queries below.
+.gallery {
+    .gallery-item {
+        position: relative;
+        width: 32.5%;
+        margin-bottom: 15px;
+        .image-title {
+            font-family:@font__h3--font-family;
+            font-size:@font__h3--font-size;
+            font-weight: @font__h3--font-weight;
+            line-height:@font__h3--line-height;
+            color: @font-swatch9-color;
+            letter-spacing: @font__h3--letter-spacing;
+            max-width: 100%;
+        }
+        .image-description {
+            font-family:@font__body;
+            font-size:@font__p--font-size;
+            font-weight: @font__p--font-weight;
+            line-height:@font__p--line-height;
+            color: @font-swatch9-color;
+            letter-spacing: @font__p--letter-spacing;
+            max-width: 100%;
+        }
+    }  
+}
+
+// Gallery Images
+// --------------
+
+// Use Background-image Method
+// For screen size larger than 920px. Media queries below.
+.gallery {
+    .image-link {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-bottom: 100%;
+    }
+    // Hide Img Element
+    .image {
+        display: none;
+    }
+}
+
+
+// Gallery Image Captions
+// ----------------------
+
+// Hide Caption
+.gallery__caption {
+    display: none;
+    margin: 0;
+    padding: 20px;
+    background-color: fade(@color-swatch3, 75%)
+}
+
+// Show Caption
+.gallery__figure:hover .gallery__caption {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        opacity: 1;
+    }
+    @media @mobile {
+        display: none;
+    }
+}
+
+// Line below title
+.gallery__image-title:after {
+    display: block;
+    content: '';
+    width: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    @media @mobile {
+        display: none;
+    }
+}
+
+.gallery__figure:hover .gallery__caption .image-title:after { width: 70px; }
+
+
+// Media queries for Image Gallery
+// -------------------------------
+
+// Screen size between 769px and 920px
+@media only screen and (max-width : 920px) and (min-width : 769px) {
+    .gallery__figure:hover .gallery__caption:before {
+        top: 3px;
+        left: 3px;
+        right: 3px;
+        bottom: 3px;
+    }
+    .gallery__figure:hover .gallery__caption {
+        padding: 9px 15px;
+    }
+    .gallery-item {
+        .image-title {
+            font-size: @font__feature-strapline--font-size;
+            line-height:@font__feature-strapline--line-height;
+        }
+    }
+}
+
+// Screen size smaller than 850px
+@media only screen and (max-width : 850px) {
+    .gallery-item {
+        .image-description {
+            font-size: bkscale(@font__feature-strapline--font-size,.9);
+            line-height:bkscale(@font__feature-strapline--line-height,.9);
+        }
+    }
+}
+
+//Tablet
+@media @tablet {
+    .gallery-item {
+        .image-description {
+            display: none;
+        }
+    }
+    .gallery__figure:hover .gallery__caption .image-title:after {
+        display: none;
+    }
+}
+
+// Screen size smaller than 600px
+@media only screen and (max-width: 600px) {
+    .gallery__gallery-item {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+}
+
+.gallery__caption {
+    border: 1px solid @color-swatch7;
+    padding: 10px;
+    margin: 0;
+    .image-title, 
+    .image-description {
+        color: @font-swatch8-color;
+        text-shadow: none;
+    }
+    .image-title {
+        font-size: @font__h4--font-size;
+        line-height: @font__h4--line-height;
+    }
+}
+
+.gallery__caption-link {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 69;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.responsivecolumns .gallery__caption-link {
+    display: none;
+}
+
+.responsivecolumns .gallery__figure:hover .gallery__caption {
+    @media @tablet {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.responsivecolumns .gallery__figure .gallery__caption {
+    display: none;
+}
+
+.responsivecolumns .widget__gallery .gallery-item:hover figcaption {
+    background-color: transparent;
+    border: 0;
+}
+
+
+
+
+// -----------------------------
+// 6.  #Feature
+// -----------------------------
+
+
+// Feature Background (Image)
+// --------------------------
+
+.feature, .bk-feature {
+    text-align: center;
+    overflow: hidden;
+}
+
+.feature__background-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: table;
+    height: 500px;
+    width: 100%;
+    @media @tablet {
+        min-height: 300px;
+        max-height: 500px;
+        background-attachment: scroll!important;
+    }
+    @media @mobile {
+        min-height: 200px;
+        max-height: 400px;
+    }
+    &:after {
+        display: none;
+    }
+}
+
+
+// Feature Content Wrap
+// --------------------
+
+.feature__content-wrap {
+    display: table-cell;
+    padding: 30px 40px;
+    vertical-align: middle;
+    @media @tablet {
+        text-align: center;
+    }
+    @media @mobile {
+        padding: 30px 10px;
+    }
+}
+
+.feature__content-inner-wrap {
+    background: fade(@color-swatch3, 40%);
+    margin: 0 auto;
+    max-width: 50%;
+    padding: 80px;
+    @media only screen and (max-width: 1024px) {
+        max-width: 65%;
+    }
+    @media @tablet {
+        max-width: 80%;    
+        padding: 20px;
+    }
+}
+
+// Feature Content
+// ---------------
+
+
+// Feature Headline
+.feature__headline {
+    &:after {
+        border-top: 3px solid fade(@color-swatch1,20%);
+        content: "";
+        display: block;
+        position: relative;
+        margin: 15px auto 5px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 15%;
+        transform: skew(-40deg);
+    }
+    @media @tablet {
+        font-size: bkscale(@font__feature-headline--font-size,0.8);
+        line-height: bkscale(@font__feature-headline--line-height,0.6);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__feature-headline--font-size,0.7);
+        line-height: bkscale(@font__feature-headline--line-height,0.6);
+    }
+}
+
+// Feature Strapline
+.feature__strapline {
+    @media @tablet {
+        font-size: bkscale(@font__feature-strapline--font-size,0.9);
+        line-height: bkscale(@font__feature-strapline--line-height,0.8);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__feature-strapline--font-size,0.8);
+        line-height: bkscale(@font__feature-strapline--line-height,0.7);
+    }
+}
+
+
+// Feature Button
+// ---------------
+
+.feature__button { 
+    margin: 10px 0 0 0;
+    background-color: @color-swatch2;
+    &:hover {
+        background-color: darken(@color-swatch2,10%);
+        &:after {
+            color: lighten(@color-swatch2,10%);
+        }
+    } 
+}
+
+
+
+
+// -----------------------------
+// 7.  #Slideshow
+// ----------------------------- 
+
+// Homepage Slideshow Height
+.responsiveslideshow, 
+.responsiveslideshow__figure {
+    position: relative;
+}
+
+.homepage-slideshow .responsiveslideshow__figure {
+    padding-bottom: 28%;
+    @media @tablet {
+        padding-bottom: 50%;
+    }
+}
+
+// Slideshow Layout
+// ----------------
+
+// Slideshow Height
+.homepage-slideshow .responsiveslideshow, 
+.homepage-slideshow .responsiveslideshow__figure {
+    position: relative;
+    min-height: 0;
+}
+
+.responsiveslideshow__slideshow-controls, 
+.responsiveslideshow__caption {
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+// Slideshow Images
+// ----------------
+
+// Use Background-image Method
+.responsiveslideshow__figure {
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 60%;
+}
+
+// Hide Img Element
+.responsiveslideshow__image {
+    display: none;
+}
+
+.homepage-slideshow .responsiveslideshow__image {
+    margin: 0px auto;
+}
+
+
+// Slideshow Image Captions
+// ------------------------
+
+.responsiveslideshow__caption {
+    position: absolute;
+    bottom: 140px;
+    width: 100%;
+    padding: 20px;
+    @media @mobile {
+        display: none;
+    }
+}
+
+.responsiveslideshow__image-title, 
+.responsiveslideshow__image-description {
+    padding: 0 10%;
+}
+
+.responsiveslideshow__image-title {
+    color: @font-swatch7-color;
+    font-size: @font__h3--font-size;
+    line-height: @font__h3--line-height;
+    text-shadow: none;
+}
+
+.responsiveslideshow__image-description {
+    color: @font-swatch7-color;
+    font-size: @font__p--font-size;
+    line-height: @font__p--line-height;
+    text-shadow: none;
+}
+
+
+
+// Slideshow Buttons
+.responsiveslideshow__slide-navigation button {
+        @media @mobile {
+        padding: 4px 12px;
+    }
+}
+
+// Navigation Buttons
+.slide-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -24px;
+}
+
+.previous-button {
+    float: left;
+}
+
+.next-button {
+    float: right;
+}
+
+.pause-toggle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    margin: 0px auto;
+    width: 110px;
+    margin-top: -24px;
+    height: 50px;
+    @media @mobile {
+        width: 50px;
+    }
+}
+
+.widget__responsivecolumns .pause-toggle {
+    width: 50px;
+}
+
+.responsiveslideshow__pause-toggle {
+    &:before {
+        margin-right: 0;
+    }
+}
+
+.responsiveslideshow__control-text {
+    display: none;
+}
+
+// Slideshow Pagination
+.responsiveslideshow__pagination-list {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button--pagination.responsiveslideshow__button {
+    vertical-align: top;
+    padding: 5px 20px;
+    margin-bottom: 5px;
+}
+
+.responsiveslideshow .pagination-item.selected .button--pagination {
+    background-color: @color-swatch3;
+    color: @font-swatch8-color;
+}
+
+.responsiveslideshow .pagination-item.selected {
+    background-color: lighten(@color-swatch3, 10%);
+}
+
+.responsiveslideshow__next-button, 
+.responsiveslideshow__previous-button, 
+.responsiveslideshow__pause-toggle {
+    padding: 10px 20px;
+}
+
+.responsiveslideshow .figure {
+    min-height: 0;
+}
+
+
+
+
+// -----------------------------
+// 8.  #Buttons
+// -----------------------------
+
+//  8.1  #STANDARD
+//  --------------
+
+
+//  8.2  #TWEET, PAYPAL, DROPBOX
+//  --------------
+
+.tweet__button, 
+.paypalbuynow__button, 
+.dropbox__button.js-link-btn {
+    min-width: 220px;
+    text-align: center;
+    padding: 8px 10px;
+}
+
+.widget__paypalbuynow form {
+    border: 0;
+    padding: 0;
+    &:after {
+        display: none;
+    }
+    @media @tablet {
+        text-align: left;
+    }
+}
+
+.icon--twitter:before,
+.icon--paypal:before,
+.icon--dropbox:before {
+    font-size: 18px;
+}
+
+//  8.3  #CLICK TO CALL
+//  --------------
+
+.widget__clicktocall {
+    padding: 5px 0;
+}
+
+.clicktocall__phone-number-link {
+    &:hover {
+        text-decoration: none;
+    }   
+}
+
+.companyphone__phone-number-link {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.phone-number-link {
+    @media @mobile {
+        color: @font-swatch9-color;
+        background-color: @color-swatch3;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+.phone-number-link {
+    background-color: @color-swatch3;
+    padding: 12px 40px;
+    color: @font-swatch7-color;
+    }
+}
+
+.phone-number-link {
+        @media @mobile {
+                  padding: 8px 40px;
+        }
+    }
+
+
+//  8.4 #SLIDESHOW
+//  --------------
+
+.responsiveslideshow__next-button, 
+.responsiveslideshow__previous-button,
+.responsiveslideshow__pause-toggle {
+    background-color: @color-swatch3;
+    color: @font-swatch8-color;
+}
+
+
+
+
+// -----------------------------
+// 9.  #Contact Form
+// -----------------------------
+
+.contactform__form-group {
+    .clearfix
+}
+
+.contactform__label {
+    float: left;
+    display: inline-block;
+    width: 20%;
+    background-color: @color-swatch3;
+    color: @font-swatch7-color;
+    @media @tablet {
+        width: 100%;
+        float: initial;
+    }
+}
+
+.contactform__input, .contactform__textarea {
+    float: left;
+    display: inline-block;
+    width: 80%!important;
+    @media @tablet {
+        width: 100%!important;
+    }
+}
+
+.contactform__input {
+    padding: 14px 10px!important;
+}
+
+.label--email.contactform__label {
+    padding: 10px 0;
+}
+
+.label--message.contactform__label {
+      padding: 36px 0;
+      @media @tablet {
+        padding: 12px 0;
+      }
+}
+
+// Body
+.contactform__form-body {
+    margin: 20px 0 30px;
+}
+
+.contactform__fieldset {
+    margin: 0px auto;
+    display: table;
+    width: 70%;
+    text-align: center;
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+// Inputs
+input.input[type=email],
+input.input[type=search], 
+.contact-form__textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+    &:focus {
+        border-color: @color-swatch4;
+    }
+}
+
+// Button
+.contact-form__input {
+    margin: 0px auto;
+    display: table;
+    border: 0;
+}
+
+.contactform__button {
+    @media @mobile {
+        margin-top: 10px;
+    }
+}
+
+// Contact Form Responsive Columns
+.widget__responsivecolumns .contactform__fieldset,
+.responsivecolumns .contactform__label,
+.responsivecolumns .contactform__input,
+.responsivecolumns .contactform__textarea {
+    width: 100%!important;
+}
+
+.responsivecolumns .contactform__label {
+    padding: 12px 0;
+}
+
+
+
+// -----------------------------
+// 10.  #Signup Form
+// -----------------------------
+
+.signupform__legend {
+    padding: 0;
+    text-align: center;
+    font-size: @font__h3--font-size;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    &:after {
+        border-top: 3px solid @color-swatch3;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 15px auto 5px;
+        min-width: 30px;
+        max-width: 200px;
+        width: 7%;
+        transform: skew(-40deg);
+    }
+}
+
+.signupform__form-body {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    @media @tablet {
+        margin: 0px auto 0;
+        padding: 0;
+    }
+    @media @mobile {
+        display: block;
+    }
+}
+
+.signupform__label {
+    display: none;
+}
+
+.signupform__input {
+    float: left;
+    display: inline-block;
+    width: 100%!important;
+    height: 48px;
+    @media @mobile {
+        display: block;
+    }
+}
+
+.signupform__form-group:nth-child(1) {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media @mobile {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.signupform__form-group:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media @mobile {
+        display: block;
+    }
+}
+
+.signupform__button { 
+    padding: 10px 30px;
+}
+
+// Sign up form Responsive Columns
+.responsivecolumns .signupform__input {
+    width: 100%;
+}
+
+.responsivecolumns .signupform__form-body {
+    padding: 0;
+}
+
+
+
+
+// -----------------------------
+// 11.  #Social Icons
+// -----------------------------
+
+.social-list {
+    padding: 0;
+}
+
+.social-item {
+    margin-bottom: 10px;
+}
+
+.socialicons__social-item a {
+    border-bottom: 3px solid @color-swatch1;
+}
+
+.socialicons__social-item a:hover {
+    text-decoration: none;
+    border-bottom: 3px solid @color-swatch3;
+    padding-bottom: 10px;
+    color: @color-swatch1;
+}
+
+.socialicons__social-link {
+    padding: 17px 20px;
+    padding: 10px 5px 10px 10px;
+    display: inline-block;
+    color: @font-swatch4-color;
+}
+
+.social-social-link {
+    color: @color-swatch4;
+}
+
+.social-name {
+    display: none;
+}
+
+.widget__socialicons {
+    .icon--twitter:before, .icon--facebook:before, .icon--googleplus:before {
+        margin-right: 5px;
+    }
+}
+
+
+// -----------------------------
+// 12.  #Twitter Feed
+// -----------------------------
+
+// Body
+.widget__twitter {
+    background-color: @color-swatch7;
+    padding: 40px 40px 15px;
+    @media @tablet {
+        padding: 20px;
+    }
+    @media @mobile {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+.tweet-list {
+    padding: 0;
+    position: relative;
+    z-index: 9999;
+    padding: 10px;
+    @media @tablet {
+        padding: 20px;
+    }
+}
+
+// Content
+.twitter__avatar {
+    display: none;
+}
+
+.twitter__tweet-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: 90%;
+    a {
+        font-weight: @font__h1--font-weight;
+        word-wrap: break-word;
+    }
+    p {
+        padding-bottom:0;
+    }
+}
+
+.twitter__tweet-item {
+    border-bottom: 1px solid @color-swatch1;
+    padding: 0 0 30px 0;
+    margin: 0 0 30px 0;
+    @media @tablet {
+        text-align: center;
+    }
+    &:before {
+        content: "\f099";
+        font-family: 'FontAwesome', sans-serif;
+        color: #00aced;
+        float: left;
+        font-size: 30px;
+        padding: 40px 30px 0px 0px;
+        @media @tablet {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    }
+    &:last-child {
+        border-bottom:0;
+        padding: 0 0 7px 0;
+        margin: 0 0 7px 0;
+    }
+}
+
+.responsivecolumns .twitter__tweet-item {
+    &:before {
+        padding-left: 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// 13.  #Divider (Keyline)
+// -----------------------------
+
+// Add styles here...
+
+
+
+
+// -----------------------------
+// 14. #Profile
+// -----------------------------
+
+//  #Footer Profile Widgets
+//  ------------------------
+
+.template-footer {
+    .twitter__tweet-item:before {
+        display: none;
+    }
+    .signupform__form {
+        padding: 20px 0 20px;
+        margin-bottom: 20px;
+    }
+    .profile__companystrapline {
+        margin-bottom: 10px;
+    }
+    .map__embed-wrap {
+        min-width: 200px;
+    }
+    .signupform__input {
+        display: inline-block;
+        float: left; 
+        width: 100%!important;
+        color: @font-swatch4-color;
+    }
+    .signupform__label {
+        display: none;
+    }
+    .signupform__form-group {
+        margin-bottom: 0;
+    }
+    .profile__signupform {
+    @media @mobile {
+        text-align: center;
+        }
+    }
+    .signupform__form-body {
+        margin: 0 30px 0;
+    }
+    .signupform__form {
+    @media @mobile {
+            padding: 20px 0 10px;
+        }
+    }
+    .twitter__avatar {
+        display: inline-block;
+        margin-left: 20px;
+        float: right;
+        @media @tablet {
+            display: block;
+            margin-left: 0;
+            float: initial;
+            width: 100%;
+        }
+        @media @mobile {
+            display: table;
+            margin: 0px auto 20px;
+            float: initial;
+        }
+    }
+    .signupform__form-group:nth-child(1) {
+        width: 80%;
+        @media @tablet {
+            width: 100%;
+        }
+    }
+    .signupform__form-group:nth-child(2) {
+        width: 20%;
+        float: right;
+        display: inline-block;
+        text-align: center;
+        @media @tablet {
+            margin-top: 10px;
+            width: 100%;
+        }
+        @media @mobile {
+            margin-top: 0;
+        }
+    }
+    .button--submit {
+        width: 100%;
+        padding: 8px 8px 12px 8px;
+        display: inline-block;
+        @media @tablet {
+            width: 20%;
+        }
+        @media @mobile {
+            width: 100%;
+        }
+    }
+    .signupform__form {
+        padding: 20px 20px 10px 20px;
+        margin-bottom: 0;
+    }
+    .signupform__form-body {
+        margin: 0;
+        padding: 0;
+    }
+    .form-group {
+        width: 50%;
+    }
+    h1, h2, h3, h4, p {
+        padding-bottom: 0;
+    }
+    .socialicons__social-item:hover {
+        background-color: transparent;
+    }
+    .socialicons__social-item {
+        margin-bottom: 0;
+    }
+    .socialicons__social-item a {
+        border-bottom: 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// 15. #Facebook
+// -----------------------------
+
+.fb_iframe_widget_fluid span {
+    max-width: 100%;
+}
+
+
+
+
+// -----------------------------
+// 16. Yelp
+// -----------------------------
+
+.yelpreview__review-list {
+    background-color: @color-swatch7;
+    margin: 0;
+    padding: 20px;
+}
+
+.yelp-reviews__review-title {
+    font-size: @font__h4--font-size;
+}
+
+.yelpreview__review-item {
+    list-style: none;
+}
+
+
+
+
+// -----------------------------
+// 17. #Map
+// -----------------------------
+
+.bk-map.map.widget__map {
+    height: initial;
+}
+
+
+
+
+// -----------------------------
+// 18. #Hr Line
+// -----------------------------
+
+hr.rule {
+    background-color: @color-swatch7;
+}
+
+

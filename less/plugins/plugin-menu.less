@@ -1,0 +1,162 @@
+// -------------------------------------
+// Cache: CSS > Plugin: Menu
+// -------------------------------------
+
+// Menu Navigation
+.widget__menusections {
+    text-align: center;
+    background-color: @color-swatch7;
+    padding: 15px;
+}
+
+.menusections-list {
+    margin: 10px 0;
+}
+
+.menusections-item:after {
+    content: "/";
+    font-size: 15px;
+    vertical-align: middle;
+    color: @color-swatch3;
+    margin-right: 0;
+    padding: 0 20px;
+    @media @mobile {
+        display:none;
+    }
+}
+
+.menusections-item:last-child:after {
+    display: none;
+}
+
+.menusections-item {
+    margin-right: 0;
+    @media @mobile {
+        display: block;
+        border-bottom: 1px dotted @color-swatch7;
+        padding: 5px 0px;
+    }
+}
+
+.menusections__item-name {
+    position: relative;
+    z-index: 9999;
+}
+
+.menu-items,
+.menu__section-body {
+    margin-bottom: 20px;
+}
+
+// Menu Content
+.widget__menu {
+	text-align:center;
+}
+
+.menu__item-article {
+    -moz-column-break-inside:avoid;
+    break-inside: avoid-column; 
+    -webkit-column-break-inside: avoid; 
+    -moz-column-break-inside: avoid; 
+    -o-column-break-inside: avoid; 
+    column-break-inside: avoid; 
+    page-break-inside: avoid; 
+    display: table;
+    @media @tablet {
+        display: block;
+    }
+}
+
+.menu__section-title {
+    margin-bottom: 10px;
+}
+
+.menu__item-header {
+    margin-top: 10px;
+}
+
+.menu-item {
+    display: block;
+}
+
+.item-content {
+    margin-top: 0;
+}
+
+.menu {
+    .section-header {
+        margin: 30px 0;
+    }
+    .item-subtitle {
+        font-style: italic;
+        color: @color-swatch2;
+        font-size: @font__p--font-size;
+    }
+    .dietary-item {
+        &:before {
+            content: "\f111";
+            font-size: 8px;
+            vertical-align: top;
+        }
+    }
+    .section-subtitle {
+        font-size: @font__h4--font-size;
+        line-height: @font__h4--line-height;
+    }
+}
+
+.menu__section-header h2,
+.menu__section-footer p {
+    padding-bottom: 0;
+}
+
+.menu-section--subsection .menu__section-header {
+    background-color: transparent;
+}
+
+.menu__item-description {
+    &:after {
+        border-top: 3px solid @color-swatch4;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 10px auto 20px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 15%;
+        transform: skew(-40deg);
+    }
+}
+
+// Item Image
+.menu .item-image .image-link {
+	background-color: transparent;
+}
+
+// Featured Section
+.menu-item--featured, 
+.menu-section--featured {
+    background-color: @color-swatch7;
+    position: relative;
+    padding: 40px;
+    z-index: 2;
+    @media @tablet {
+        padding: 20px;
+    }
+}
+
+.menu-section--featured .menu-item--featured {
+    padding: 0;
+}
+
+// Section Footer
+.menu__section-footer {
+    text-align: center;
+    background-color: @color-swatch7;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid darken(@color-swatch1,5%);
+    p {
+        margin-bottom: 0;
+    }
+}

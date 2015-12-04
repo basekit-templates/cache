@@ -1,0 +1,357 @@
+// ------------------------------------------------
+// Couture Template: CSS > Plugins > Ecommerce > Product
+// ------------------------------------------------
+
+
+
+
+// ------------------------------
+// Product
+// ------------------------------
+
+
+.ecomproduct__gallery-item.next .ecomproduct__image,
+.ecomproduct__gallery-item.prev .ecomproduct__image {
+    display: none;
+}
+
+ .ecom-product {
+    padding: 2%;
+    .clearfix
+ }
+
+
+// ------------------------------
+// Product Article
+// ------------------------------
+
+
+.product-article {
+
+}
+
+
+
+
+// ------------------------------
+// Product Imaginery
+// ------------------------------
+
+
+
+
+
+// Product Images
+// ------------------------------
+
+
+.product-images {
+
+}
+
+
+
+
+// Product Image
+// ------------------------------
+
+
+.product-image {
+    display: none;
+
+    &.no-image {
+        display: none !important;
+    }
+
+    .product--one-image & {
+        display: block;
+        height: 0;
+        margin: 0 auto;
+        padding-bottom: 60%;
+        position: relative;
+
+        @media @bp-global-small {
+            width: 100%;
+            padding-bottom: 70%;
+        }
+    }
+}
+
+
+
+
+// Image Link
+// ------------------------------
+
+
+.product-image .image-link {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position:  center;
+    background-size: contain;
+    height: 100%;
+    background-color: @color-swatch1;
+}
+
+// Image
+// ------------------------------
+
+ .product-image .image {
+    display: none;
+}
+
+
+// Product Content
+// ------------------------------
+
+
+.product-content {
+
+}
+
+// Product Header
+// ------------------------------
+
+.product-header {
+    .clearfix;
+    position: relative;
+    top: -1em;
+    z-index: 1;
+
+    // Message
+
+    .message {
+        float: left;
+        clear: both;
+        margin: 0;
+        @media @tablet {
+            float: initial;
+        }
+    }
+}
+
+    // Product Title
+
+    .product-title {
+        font-size: @font__h2--font-size;
+        font-family: @font__h3--font-family;
+        line-height: @font__h2--line-height;
+        font-weight: 300;
+    }
+
+    // Product Price
+
+    .ecomproduct__product-price {
+        font-size: @font__h1--font-size;
+        font-family: @font__h3--font-family;
+        line-height: @font__h1--line-height;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+
+
+
+
+// ------------------------------
+// Product Body
+// ------------------------------
+
+
+.product-body {
+    clear: both;
+    margin: 20px 0;
+    @media @tablet {
+        margin: 0 0 20px 0;
+    }
+}
+
+
+
+
+// ------------------------------
+// Product Actions
+// ------------------------------
+
+
+.product-actions {
+    margin: 0 0 30px 0;
+
+
+
+
+    // Add to Basket Button
+    // ------------------------------
+
+    .form .button {
+        &.added {
+            background-color: @color-swatch2;
+            box-shadow: none;
+            &:before {
+                content: '\f00c'
+            }
+        }
+    }
+
+
+
+
+    // Legend
+    // ------------------------------
+
+    legend {
+        display: none;
+    }
+
+
+
+
+    // Fieldset
+    // ------------------------------
+
+    .fieldset {
+        margin-bottom: 20px;
+    }
+
+
+
+
+    // Form Group
+    // ------------------------------
+
+
+    .form-group {
+        display: inline-block;
+        min-width: 100px;
+        margin: 0 0.6em 1em 0;
+        float: left;
+
+
+
+
+        // Label
+        // ------------------------------
+
+
+        .label {
+            font-size: 13px;
+            line-height: 1;
+            color: fade(@font-swatch5-color, 70%);
+            display: block;
+            padding-bottom: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// Basket Wrap
+// ------------------------------
+
+
+.view-basket-wrap {
+}
+
+
+
+
+// ------------------------------
+// Product Attributes
+// ------------------------------
+
+
+.product-attributes {
+    clear: both;
+
+
+
+    // Attribute Title
+    // ------------------------------
+
+
+    .product-attribute-title {
+        font-size: 13px;
+        line-height: 1.5;
+        color: fade(@font-swatch5-color, 40%);
+        display: block;
+        padding-bottom: 0.5em;
+    }
+
+
+
+
+    // Tag List
+    // ------------------------------
+
+
+    .tag-list {
+        display: block;
+        line-height: 1;
+    }
+
+
+
+
+    // Tag Item
+    // ------------------------------
+
+
+
+
+    // Product Category, Product Tags
+    // ------------------------------
+
+
+    .product-category, .product-tags {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1;
+        margin: 0 2em 1em 0;
+
+        // P
+
+        p {
+            line-height: 1;
+        }
+    }
+
+    .product-category {
+        @media @tablet {
+            margin: 0 10px 0 0;
+        }
+    }
+
+
+    // Category Link, Tag Link
+    // ------------------------------
+
+
+    .category-link, .tag-link {
+        font-size: @font__button--font-size;
+        font-family: @font__button--font-family;
+        font-weight: @font__button--font-weight;
+        display: inline-block;
+        line-height: 1.8;
+        margin-top: 0.5em;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            border-bottom: 3px solid @color-swatch3;
+            text-decoration: none;
+        }
+
+        &:first-letter {
+            text-transform: uppercase;
+        }
+    }
+}

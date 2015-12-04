@@ -1,0 +1,235 @@
+// --------------------------------
+// BaseKit Baseplate Theme (v2.0)
+// --------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #LESS INCLUDES
+// 2. #PAGE SETTINGS
+// 3. #TEMPLATE STYLES
+
+
+
+
+// -----------------------------
+// 1. #LESS Includes
+// -----------------------------
+
+@import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework
+
+// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
+//    your template to guarentee widgets come to life. Proivides default styles for all widgets.
+
+// Template Includes
+@import "@{templateLocal}/less/theme.less"; // Theme
+@import "@{templateLocal}/less/widgets.less"; // Widgets
+@import "@{templateLocal}/less/mixins.less"; // Mixins
+@import "@{templateLocal}/less/navigation.less"; // Navigation
+
+// Plugin Includes
+@import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog CSS
+@import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
+@import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
+
+
+
+@bp-global-large:   ~"only screen and (min-width : 1200px)";
+@bp-global-medium:  ~"only screen and (min-width : 851px) and (max-width : 1200px)";
+@bp-global-small:   ~"only screen and (max-width : 850px)";
+
+// -----------------------------
+// 2. #Page Settings **
+// -----------------------------
+
+// ** Styles for advanced Baseplate template - remove when developing a custom template
+
+
+// Body
+// --------------
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-attachment: fixed;
+    & > * {
+        flex: 0 0 auto;
+    }
+    & > .container,
+    & > .bk-pt-default {
+        flex: 1 0 auto;
+    }
+}
+
+
+// Page Container
+// --------------
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	@media @tablet {
+        margin: 0;
+		padding-left: 4%;
+        padding-right: 4%;
+	}
+}
+
+
+// Header Wrapper
+// --------------
+
+.header-wrapper {
+	width: 100%;
+	// Layout
+	padding: 20px 2%;
+	@media @tablet {
+		display: block;
+		padding: 25px 4% 25px;
+	}
+}
+
+
+// #Default Page
+// -------------
+
+// Sticky Footer
+.bk-pt-default {
+    flex: 1;
+}
+
+.bk-pt-default .container {
+}
+
+// Default Page Title
+.template-title {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    margin-top: 40px;
+}
+
+.template-title h1 {
+    &:after {
+        border-top: 3px solid fade(@color-swatch3,20%);
+        content: "";
+        display: block;
+        position: relative;
+        margin: 25px auto 5px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 5%;
+        transform: skew(-40deg);
+    }
+}
+
+
+
+// Header
+// -----------------------------
+
+
+// Content Widget Left
+.header-search {
+    width: 33.1%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    @media @tablet {
+        display: none;
+    }
+}
+
+// Logo Center
+.header-companyname {
+    width: 33.1%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    @media @tablet {
+        display: block;
+        width: 100%;
+    }
+}
+
+.company-link:hover{
+    color: inherit;
+}
+
+// Content Widget right
+.header-basket {
+    width: 32.1%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    @media @tablet {
+        display: block;
+        width: 100%;
+    }
+}
+
+.page-zones__template-widgets__ecombasket-shopbasket-bk-overlay {
+    top: 7px!important;
+}
+
+// Ecom Search Products
+// -----------------------------
+
+.flex-item.flex-product-search {
+    display: block;
+    @media @tablet {
+        margin: 0px auto;
+        display: table;
+    }
+}
+
+
+.flex-item.flex-product-search input[type="search"] {
+    border: 0;
+    border-bottom: 1px solid darken(@color-swatch1,10%);
+}
+
+.flex-item.flex-product-search input.input[type=search]:focus {
+    border: 0;
+    border-bottom: 1px solid darken(@color-swatch1,20%);
+}
+
+.ecomproductslist__button {
+    background-color: transparent;
+}
+
+
+
+
+// -----------------------------
+// 3. #Template Styles
+// -----------------------------
+
+.template-content {
+	width:100%;
+	margin:0px auto;
+	@media @tablet {
+		width:100%;
+	}
+}
+
+.widget--zone-widget {
+    margin: 0 0 10px;
+}
+
+
+
+
+// -----------------------------
+// 4. #Variables
+// -----------------------------
+
+//@import "@{templateLocal}/bk-v8-test.less";
+@import "@{templateLocal}/less/variables.less";

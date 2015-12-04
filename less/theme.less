@@ -1,0 +1,397 @@
+// ---------------------------------
+// Cache: CSS > Template Theme
+// ---------------------------------
+
+// 1. #HEADER, PROFILE HEADER & FOOTER
+// 2. #TYPOGRAPHY
+// 3. #FORMS
+// 4. #BUTTONS
+// 5. #IMAGES
+// 6. #LINE
+
+
+
+
+// -----------------------------
+// 1. #Header, Profile Header & Footer
+// -----------------------------
+
+.template-header,
+.template-footer {
+	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+	min-height: 80px;
+	// Tablet: reduce height
+}
+
+.profile-header, 
+.logo-banner {
+    @media @tablet {
+        text-align: center;
+    }
+}
+
+.logo-banner {
+    text-align: center;
+}
+
+header input.input[type=search]:focus {
+    border: 0!important;
+    border-bottom: 1px solid darken(@color-swatch1,10%)!important;
+}
+
+// Footer
+// ------
+
+.template-footer {
+    min-height: 60px;
+    background-color: darken(@color-swatch4,5%);
+    text-align: center;
+    color: @font-swatch8-color;
+    padding: 20px;
+    width: 100%;
+    @media @tablet {
+        min-height: 100px;
+        display: block;
+    }
+    // Change heading elements to white
+    h1, h2, h3, h4 {
+        color: @font-swatch8-color;
+    }
+    // Lighten paragraph & link elements
+    p, a {
+        color: @font-swatch8-color;
+    }
+    // Reset Twitter feed styles
+    .twitter-feed {
+        padding: 0;
+        background-color: transparent;
+    }
+    .left {
+        float: left;
+        text-align: left;
+        @media @tablet {
+            margin-bottom: 10px;
+        }
+    }
+    .right {
+        float: right;
+        text-align: right;
+    }
+    .left,
+    .right {
+        display: inline-block;
+        width: 100%;
+        @media @tablet {
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// 2. #Typography
+// -----------------------------
+
+// Colour Swatches
+// ---------------
+
+// @color-swatch1: Background 
+// @color-swatch2: Contrast
+// @color-swatch3: Buttons
+// @color-swatch4: Headings
+// @color-swatch5: Paragraph
+// @color-swatch6: Navigation Links
+// @color-swatch7: Spare
+
+
+// Font Swatches
+// -------------
+
+// font1:  Heading 1
+// font2:  Heading 2
+// font3:  Heading 3
+// font4:  Heading 4
+// font5:  Paragraph
+// font6:  Navigation Link
+// font7:  Buttons
+// font8:  Feature Headline
+// font9:  Feature Strapline
+// font10: Company Name (Logo)
+
+
+// Standard Text Link
+// ------------------
+
+a { 
+    color: @color-swatch2; 
+}
+
+
+// Blockquote
+// ----------
+
+blockquote:before {
+	margin-right: 10px;
+	font-size: 32px;
+	color: @color-swatch3;
+}
+
+// Heading's BKscale for Mobile
+// ----------
+
+.logo-banner-left h1,
+.logo-banner-right h1,
+h1 {
+    @media @tablet {
+        font-size: bkscale(@font__h1--font-size,0.8);
+        line-height: bkscale(@font__h1--line-height,0.9);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__h1--font-size,0.8);
+        line-height: bkscale(@font__h1--line-height,0.9);
+    }
+}
+
+h2 {
+    @media @mobile {
+        font-size: bkscale(@font__h2--font-size,0.8);
+        line-height: bkscale(@font__h2--line-height,0.9);
+    }
+}
+
+h3 {
+    @media @mobile {
+        font-size: bkscale(@font__h3--font-size,0.8);
+        line-height: bkscale(@font__h3--line-height,0.9);
+    }
+}
+
+h4 {
+    @media @tablet {
+        font-size: bkscale(@font__h4--font-size,0.8);
+        line-height: bkscale(@font__h4--line-height,0.9);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__h4--font-size,0.8);
+        line-height: bkscale(@font__h4--line-height,0.9);
+    }
+}
+
+
+
+// -----------------------------
+// 3. #Forms
+// -----------------------------
+
+// Form
+// ----------
+
+form, 
+.form {
+    background-color: @color-swatch7;
+    padding: 20px;
+    position: relative;
+    @media @tablet {
+        text-align: center;
+    }
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+// Form Body
+.form-body {
+	margin: 10px 0 20px;
+    position: relative; 
+    z-index: 9999;
+	@media @mobile {
+		margin: 20px;
+	}
+}
+
+// Form Group
+.form-group { 
+	margin-bottom: 20px;
+	@media @mobile {
+		margin-bottom: 10px;
+	}
+}
+
+// Header Form Group
+.template-header .form-group {
+    float: left;
+    display: inline-block;
+}
+
+
+// Legend
+// ----------
+
+legend { 
+	width: 100%;
+	padding: 30px 30px;
+	color: @font-swatch4-color;
+	@media @mobile {
+		padding: 6px 20px;
+	}
+}
+
+// Label
+// ----------
+
+label {
+    margin: 0;
+}
+
+// Select
+// ----------
+
+select {
+    height: 36px;
+    outline: none;
+    border: 1px solid darken(@color-swatch1,10%);
+    border-radius: 0;
+    background-color: @color-swatch1;
+    font-size: 12px;
+    text-indent: 0;
+    &:hover, &:focus {
+        background-color: @color-swatch1;
+        cursor: pointer;
+	}
+}
+
+// Inputs: Text
+// ------------
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line {
+    border: 1px solid @color-swatch1;
+    -webkit-appearance: none;
+    background-color: @color-swatch1;
+    border-radius: 0;
+    &:focus {
+        border: 1px solid @color-swatch3;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+input.input[type=email]:focus, 
+input.input[type=search]:focus, 
+.contact-form__textarea:focus {
+    border: 1px solid @color-swatch3!important;
+}
+
+.template-header input.input[type=search]:focus {
+    border-bottom: 1px solid darken(@color-swatch7,8%)!important;
+}
+
+input.blogsearch__input.input[type=search]:focus {
+    border-bottom: 1px solid @color-swatch3!important;
+}
+
+.signupform__label, 
+.contactform__legend, 
+.blogsearch__legend {
+    border-bottom: 0;
+    text-align: center;
+    font-size: @font__h3--font-size;
+    font-weight: @font__h3--font-weight;
+    padding: 30px 0 0;
+}
+
+.blogsearch__legend {
+    padding: 20px 0 0;
+}
+
+.contactform__legend {
+    margin-bottom: 10px;
+    &:after {
+        border-top: 3px solid @color-swatch4;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 15px auto 5px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 16%;
+        transform: skew(-40deg);
+    }
+    @media @tablet {
+        padding: 20px 0 10px;
+    }
+}
+
+.signupform__input {
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+    .button--submit {
+        display: inline-block;
+        float: right;
+        min-width: 20%;
+        vertical-align: bottom;
+        margin-top: 21px;
+    }
+}
+
+.signupform__form-group {
+    .clearfix
+}
+
+
+
+
+// -----------------------------
+// 4. #Buttons
+// -----------------------------
+
+button, 
+.button,
+.blogpostlist__read-more {
+    padding: 8px 30px;
+    background-color: @color-swatch3;
+    color: @font-swatch7-color;
+}
+
+
+
+
+// -----------------------------
+// 5. #Images
+// -----------------------------
+
+// Image Captions
+// --------------
+
+// Gallery & Slideshow
+.image-title,
+.image-description {
+	color: @color-swatch1;
+}
+
+// Image Widget
+.image-widget__caption { margin: 10px 0; }
+.image-widget__image-title,
+.image-widget__image-description {
+	color: @font-swatch5-color;
+	text-shadow: none;
+}
+
+
+
+
+// -----------------------------
+// 6. #Line
+// -----------------------------
+
+.line__rule {
+    transform: skew(-60deg);
+}
