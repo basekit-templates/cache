@@ -21,9 +21,11 @@
                 {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
                 {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
             </div>
+            {% if plugins.ecommerce.store.live %}
             <div class="header-basket">
                 {{widget('ecombasket', 'shopbasket', {})|raw}}
             </div>
+            {% endif %}
         </div>
     </div>
 </header>
