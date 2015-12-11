@@ -143,7 +143,7 @@
             "font-weight": "300",
             "line-height": "inherit",
             "color": "@color-swatch4",
-            "letter-spacing": "3px"
+            "letter-spacing": "inherit"
         }
     },
     "styles": {
