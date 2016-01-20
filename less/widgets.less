@@ -1153,8 +1153,18 @@ input.input[type=search],
         display: none;
     }
     .signupform__form {
+        background-color: transparent;
         padding: 20px 0 20px;
         margin-bottom: 20px;
+
+        .legend {
+            color: @font-swatch8-color;
+            text-align: right;
+
+            &:after {
+                display: none;
+            }
+        }
     }
     .profile__companystrapline {
         margin-bottom: 10px;
