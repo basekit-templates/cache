@@ -23,7 +23,7 @@
 	// Tablet: reduce height
 }
 
-.profile-header, 
+.profile-header,
 .logo-banner {
     @media @tablet {
         text-align: center;
@@ -88,8 +88,18 @@ header input.input[type=search]:focus {
         }
     }
     .signupform__form-body {
+        background-color: transparent;
         @media @tablet {
             display: block;
+        }
+
+        .legend {
+            color: @font-swatch8-color;
+            text-align: right;
+
+            &:after {
+                display: none;
+            }
         }
     }
     .signupform__legend {
@@ -107,7 +117,7 @@ header input.input[type=search]:focus {
 // Colour Swatches
 // ---------------
 
-// @color-swatch1: Background 
+// @color-swatch1: Background
 // @color-swatch2: Contrast
 // @color-swatch3: Buttons
 // @color-swatch4: Headings
@@ -134,8 +144,8 @@ header input.input[type=search]:focus {
 // Standard Text Link
 // ------------------
 
-a { 
-    color: @color-swatch2; 
+a {
+    color: @color-swatch2;
 }
 
 
@@ -200,7 +210,7 @@ h4 {
 // Form
 // ----------
 
-form, 
+form,
 .form {
     background-color: @color-swatch7;
     padding: 20px;
@@ -216,7 +226,7 @@ form,
 // Form Body
 .form-body {
 	margin: 10px 0 20px;
-    position: relative; 
+    position: relative;
     z-index: 9999;
 	@media @mobile {
 		margin: 20px;
@@ -224,7 +234,7 @@ form,
 }
 
 // Form Group
-.form-group { 
+.form-group {
 	margin-bottom: 20px;
 	@media @mobile {
 		margin-bottom: 10px;
@@ -241,7 +251,8 @@ form,
 // Legend
 // ----------
 
-legend { 
+legend {
+    font-family: @font__h3--font-family;
 	width: 100%;
 	padding: 30px 30px;
 	color: @font-swatch4-color;
@@ -293,8 +304,8 @@ textarea,
     }
 }
 
-input.input[type=email]:focus, 
-input.input[type=search]:focus, 
+input.input[type=email]:focus,
+input.input[type=search]:focus,
 .contact-form__textarea:focus {
     border: 1px solid @color-swatch3!important;
 }
@@ -307,8 +318,8 @@ input.blogsearch__input.input[type=search]:focus {
     border-bottom: 1px solid @color-swatch3!important;
 }
 
-.signupform__label, 
-.contactform__legend, 
+.signupform__label,
+.contactform__legend,
 .blogsearch__legend {
     border-bottom: 0;
     text-align: center;
@@ -363,12 +374,17 @@ input.blogsearch__input.input[type=search]:focus {
 // 4. #Buttons
 // -----------------------------
 
-button, 
+button,
 .button,
 .blogpostlist__read-more {
     padding: 8px 30px;
     background-color: @color-swatch3;
     color: @font-swatch7-color;
+    font-family: @font__button--font-family;
+    font-size: @font__button--font-size;
+    font-weight: @font__button--font-weight;
+    letter-spacing: @font__button--letter-spacing;
+    line-height: @font__button--line-height;
 }
 
 
