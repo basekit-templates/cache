@@ -1,10 +1,10 @@
 <!-- Footer -->
 <footer class="template-footer clearfix">
     <div class="left">
-        <h4>{{widget('content', 'footer2content', {content: 'profile', lines: 'all'})|raw}}</h4>
+        {{widget('profile', 'profile1', { 'profileType':'socialicons' })|raw}}
     </div>
     <div class="right">
-        {{widget('profile', 'footerprofilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+        {{widget('profile', 'profile1', { 'profileType':'copyright' })|raw}}
        </div>
 </footer>
 <!-- End Footer -->
