@@ -1159,7 +1159,10 @@ input.input[type=search],
 
         .legend {
             color: @font-swatch8-color;
-            text-align: right;
+            text-align: left;
+            @media @tablet {
+                text-align: center;
+            }
 
             &:after {
                 display: none;
