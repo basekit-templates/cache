@@ -716,11 +716,19 @@ th {
 
 .ecomproductslist__form {
     border: 0;
+    background-color: transparent!important;
 }
 
 .ecomproductslist__listing-order {
     clear: both;
     padding: 0;
+    @media @tablet {
+        text-align: center;
+    }
+}
+
+.ecomproductslist__label {
+    margin-bottom: 5px;
 }
 
 // Search Button + Clear Search Button
@@ -761,11 +769,11 @@ input.input[type=search]:focus {
     &:after {
         content:"\f002";
         font-family: 'FontAwesome', sans-serif;
-        color: @font-swatch4-color;
+        color: #ffffff;
         position: absolute;
         width: 40px;
         height: 31px;
-        background-color: @color-swatch1;
+        background-color: @color-swatch3;
         top: 0;
         left: 0;
         right: 0;
