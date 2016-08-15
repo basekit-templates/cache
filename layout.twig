@@ -1,16 +1,6 @@
 <!doctype html>
-<!--[if lt IE 7]>
-	<html class="no-js ie6 oldie" lang="en">
-<![endif]-->
-<!--[if IE 7]>
-	<html class="no-js ie7 oldie" lang="en">
-<![endif]-->
-<!--[if IE 8]>
-	<html class="no-js ie8 oldie" lang="en">
-<![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="{{ page.seoLang }}">
-<!--<![endif]-->
+
 <head>
 	<meta charset="utf-8" />
 	<title>{{ page.title }}</title>
@@ -34,7 +24,7 @@
 
     {% include basekit.bodyScript %}
 
-    
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')</script>
 <script src="{{asset('js/main.js')}}"></script>
@@ -51,13 +41,13 @@
             $( this ).click(function() {
                 $( this ).toggleClass( "open" );
             });
-        
+
         // Set a data attribute that matches the content of the nav item
         var link = document.querySelectorAll('.item-name');
-        for (i = 0; i < link.length; i++) { 
+        for (i = 0; i < link.length; i++) {
             link[i].setAttribute("data-hover", link[i].innerHTML);
         }
     </script>
-    
+
 </body>
 </html>
