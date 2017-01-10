@@ -212,7 +212,7 @@
         },
         "navigation": {
             "color__navigation--background": "transparent",
-            "color__navigation--text": "13px",
+            "color__navigation--text": "@font-swatch6-color",
             "color__navigation--text--hover": "@font-swatch6-color-hover",
             "color__navigation--text--selected": "@font-swatch6-color-hover",
             "color__navigation-list--background": "@color-swatch4",
