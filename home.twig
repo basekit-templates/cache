@@ -25,10 +25,15 @@
     <section class="template-content container">
     	<!-- Main Widet Zone -->
        	{{zone('main')|raw}}
-    
+
     </section>
     <!-- End Page Content -->
 
 {% include "includes/footer.twig" %}
 
+{% endblock %}
+
+
+{% block scripts %}
+    <script src="{{ asset('js/home.js')}}"></script>
 {% endblock %}
