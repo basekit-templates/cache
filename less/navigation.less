@@ -137,7 +137,7 @@
 .navigation-item.folder {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 
-    &.open .navigation-list {
+    &.folder-open .navigation-list {
         background-color: @color-swatch3;
         border: none;
         display: -webkit-box;
@@ -159,7 +159,7 @@
         }
     }
 
-    &.open .navigation-list {
+    &.folder-open .navigation-list {
         opacity: 1;
     }
 
@@ -190,7 +190,7 @@
     }
 }
 
-.navigation-item:not(.open):hover .navigation-list--children {
+.navigation-item:not(.folder-open):hover .navigation-list--children {
     display: none;
 }
 
@@ -239,7 +239,7 @@
 		.navigation-item:hover & {
 			display: none;
 		}
-		.navigation-item.open & {
+		.navigation-item.folder-open & {
 			display: block;
 		}
 	}

@@ -5,10 +5,6 @@ $(document).on("click", ".navigation-toggle", function() {
     $( ".bk-extendednavigation" ).toggleClass( "open" );
 });
 
-// Toggles class open to display/hide the whole navigation
-$(document).on("click", ".navigation-item.folder", function() {
-    $( ".folder" ).toggleClass( "open" );
-});
 
 // Set a data attribute that matches the content of the nav item
 var link = document.querySelectorAll('.item-name');
