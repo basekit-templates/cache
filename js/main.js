@@ -1,6 +1,6 @@
 // Toggles class open to display/hide the whole navigation
  $(document).on("click", ".navigation-item.folder", function() {
-     $( ".folder" ).toggleClass( "folder-open" );
+     $(this).toggleClass( "folder-open" );
  });
 
 // Toggles class open to display/hide the whole navigation
