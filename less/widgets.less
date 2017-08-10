@@ -1071,6 +1071,14 @@ input.input[type=search],
     }
 }
 
+.responsivecolumns .columns-three-left, 
+.responsivecolumns .columns-three-middle, 
+.responsivecolumns .columns-three-right {
+    .widget__twitter {
+        padding: 20px 20px 15px;
+    }
+}
+
 .tweet-list {
     padding: 0;
     position: relative;
@@ -1205,26 +1213,10 @@ input.input[type=search],
         }
     }
     .twitter__avatar {
-        display: inline-block;
-        margin-left: 20px;
-        float: right;
-        @media @tablet {
-            display: block;
-            margin-left: 0;
-            float: initial;
-            width: 100%;
-        }
-        @media @mobile {
-            display: table;
-            margin: 0px auto 20px;
-            float: initial;
-        }
+        display: none;
     }
     .signupform__form-group:nth-child(1) {
-        width: 80%;
-        @media @tablet {
-            width: 100%;
-        }
+        width: 100%;
     }
     .signupform__form-group:nth-child(2) {
         width: 20%;
@@ -1257,9 +1249,6 @@ input.input[type=search],
     .signupform__form-body {
         margin: 0;
         padding: 0;
-    }
-    .form-group {
-        width: 50%;
     }
     h1, h2, h3, h4, p {
         padding-bottom: 0;
