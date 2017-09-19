@@ -259,6 +259,18 @@
 // Burger Icon
 // -------------
 
+[data-widget-type="extendednavigation"] .widget-overlay {
+    display: none;
+}
+
+[data-widget-type="extendednavigation"] .open + .widget-overlay {
+
+    @media @tablet {
+        display: block;
+        top: 45px;
+    }
+}
+
 .navigation-toggle {
     display: none;
 }
