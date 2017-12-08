@@ -260,7 +260,10 @@
 // -------------
 
 [data-widget-type="extendednavigation"] .widget-overlay {
-    display: none;
+	
+    @media @tablet {
+        display: none;
+    }
 }
 
 [data-widget-type="extendednavigation"] .open + .widget-overlay {
