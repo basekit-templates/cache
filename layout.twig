@@ -28,6 +28,13 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{asset('js/main.js')}}"></script>
     <script src="{{asset('js/theme.js')}}"></script>
+    
+    <!-- Makes it so only one folder dropdown will show at anytime -->
+    <script>
+        $('.folder-toggle').click(function() {
+            $('.folder-toggle.folder-open').removeClass('folder-open');
+        });
+    </script>
 
     <!-- Page Specific Scripts -->
     {% block scripts %}
