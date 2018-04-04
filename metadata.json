@@ -216,7 +216,7 @@
             "color__navigation--text--hover": "@font-swatch6-color-hover",
             "color__navigation--text--selected": "@font-swatch6-color-hover",
             "color__navigation-list--background": "@color-swatch4",
-            "color__navigation-item--background": "@color__secondary",
+            "color__navigation-item--background": "@color-swatch7",
             "color__navigation-item--background--hover": "@color__secondary",
             "color__navigation-item--background--selected": "@color__secondary",
             "font__navigation--font-family" : "@font-swatch6-font-family",
