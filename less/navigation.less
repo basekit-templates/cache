@@ -260,7 +260,7 @@
 // -------------
 
 [data-widget-type="extendednavigation"] .widget-overlay {
-	
+
     @media @tablet {
         display: none;
     }
@@ -280,6 +280,7 @@
 
 @media @tablet {
     .navigation-toggle {
+        background: @color__navigation-item--background;
         display: block;
         overflow: hidden;
         width: 100%;
@@ -301,8 +302,8 @@
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch7;
-            box-shadow: 0 6px 0 @color-swatch7;
+            background: @color__navigation--text;
+            box-shadow: 0 6px 0 @color__navigation--text;
             .transition( all, 0.5s, ease );
         }
         &:after {
@@ -315,27 +316,28 @@
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch7;
+            background: @color__navigation--text;
             .transition( all, 0.5s, ease );
         }
     }
     .navigation-toggle:hover {
+        background: @color__navigation-item--background;
         border: 0;
             &:before {
-                background: @color-swatch7;
-                box-shadow: 0 6px 0 @color-swatch7;
+                background: @color__navigation--text;
+                box-shadow: 0 6px 0 @color__navigation--text;
             }
             &:after {
-                background: @color-swatch7;
+                background: @color__navigation--text;
             }
     }
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
-            background-color: @color-swatch3;
+            background-color: @color__navigation-item--background;
             &:before {
                 margin-top: 21px;
-                background: @color-swatch7;
+                background: @color__navigation--text;
                 box-shadow: none;
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
@@ -354,7 +356,7 @@
                 right: 0;
                 margin-top: 21px;
                 margin-left: -13px;
-                background: @color-swatch7;
+                background: @color__navigation--text;
                 box-shadow: none;
                 -webkit-transform: rotate(-45deg);
                 -moz-transform: rotate(-45deg);
