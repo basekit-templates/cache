@@ -1,0 +1,27 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+{% include "includes/header.twig" %}
+
+<div class="bk-pt-default">
+
+    <div class="profile-header">
+        {{widget('extendednavigation', 'extendednavigation', { 'align': 'right'})|raw}}
+    </div>
+
+    <!-- Page Content -->
+    <section class="template-content container">
+
+        <!-- Main Widet Zone -->
+        {{zone('main')|raw}}
+
+    </section>
+    <!-- End Page Content -->
+    
+</div>
+<!-- End bk-pt-default -->
+
+{% include "includes/footer.twig" %}
+
+{% endblock %}
