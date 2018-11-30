@@ -127,13 +127,16 @@ body {
     text-align: center;
     padding: 0 20px;
     background-color: transparent;
+    margin-bottom: 40px;
     margin-top: 40px;
     @media @tablet {
+        margin-bottom: 20px;
         margin-top: 20px;
     }
 }
 
-.template-title h1 {
+.template-title h1,
+.ecombasketsummary__summary-title {
     &:after {
         border-top: 3px solid fade(@color-swatch3,20%);
         content: "";
