@@ -410,7 +410,9 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    display: table;
+    .display-flex;
+    .align-items(center);
+    .justify-content(center);
     height: 600px;
     width: 100%;
     @media @tablet {
@@ -432,7 +434,6 @@
 // --------------------
 
 .feature__content-wrap {
-    display: table-cell;
     padding: 30px 40px;
     vertical-align: middle;
     @media @tablet {
@@ -444,9 +445,10 @@
 }
 
 .feature__content-inner-wrap {
+    .flex(0 1 auto);
     background: fade(@color-swatch3, 40%);
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 860px;
     padding: 80px;
     @media only screen and (max-width: 1024px) {
         max-width: 65%;
@@ -459,6 +461,13 @@
 
 // Feature Content
 // ---------------
+
+
+.feature__headline,
+.feature__strapline {
+    -ms-word-break: break-word;
+    word-wrap: break-word;
+}
 
 
 // Feature Headline
