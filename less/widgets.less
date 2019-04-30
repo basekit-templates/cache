@@ -413,16 +413,14 @@
     .display-flex;
     .align-items(center);
     .justify-content(center);
-    height: 600px;
+    min-height: 600px;
     width: 100%;
     @media @tablet {
         min-height: 300px;
-        max-height: 500px;
         background-attachment: scroll!important;
     }
     @media @mobile {
         min-height: 200px;
-        max-height: 400px;
     }
     &:after {
         display: none;
@@ -451,10 +449,10 @@
     max-width: 860px;
     padding: 80px;
     @media only screen and (max-width: 1024px) {
-        max-width: 65%;
+        max-width: 80%;
     }
     @media @tablet {
-        max-width: 80%;
+        max-width: 90%;
         padding: 20px;
     }
 }
