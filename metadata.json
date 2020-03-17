@@ -1,4 +1,5 @@
 {
+    "versionTenCompatible": 1,
     "name":"Cache",
     "thumbnail":"cache.png",
     "screenshot":"cache-screenshot.jpg",
