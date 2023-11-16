@@ -735,38 +735,18 @@
     padding: 5px 0;
 }
 
-.clicktocall__phone-number-link {
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-.companyphone__phone-number-link {
-    &:hover {
-        text-decoration: none;
-    }
+.companyphone__phone-number-link:hover,
+.clicktocall__phone-number-link:hover {
+    text-decoration: none;
 }
 
 .phone-number-link {
-    @media @mobile {
-        color: @font-swatch9-color;
+    @media only screen and (max-width: 568px) {
         background-color: @color-swatch3;
+        padding: 8px 40px;
+        color: @font-swatch7-color;
     }
 }
-
-@media only screen and (max-width: 568px) {
-.phone-number-link {
-    background-color: @color-swatch3;
-    padding: 12px 40px;
-    color: @font-swatch7-color;
-    }
-}
-
-.phone-number-link {
-        @media @mobile {
-                  padding: 8px 40px;
-        }
-    }
 
 
 //  8.4 #SLIDESHOW
@@ -1295,6 +1275,7 @@ input.input[type=search],
     }
     .socialicons__social-item a {
         border-bottom: 0;
+        display: block;
     }
     .signupform__fieldset {
         width: 100%;
